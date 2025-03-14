@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sense Organs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .buttons {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .image-container {
+            display: none;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sense Organs</h1>
+    <div class="buttons">
+        <button onclick="showImages('sight')">Sight</button>
+        <button onclick="showImages('hearing')">Hearing</button>
+        <button onclick="showImages('touch')">Touch</button>
+        <button onclick="showImages('taste')">Taste</button>
+        <button onclick="showImages('smell')">Smell</button>
+    </div>
+    
+    <div id="sight" class="image-container">
+        <img src="sight1.jpg" alt="Sight">
+        <img src="sight2.jpg" alt="Sight">
+    </div>
+    <div id="hearing" class="image-container">
+        <img src="hearing1.jpg" alt="Hearing">
+        <img src="hearing2.jpg" alt="Hearing">
+    </div>
+    <div id="touch" class="image-container">
+        <img src="touch1.jpg" alt="Touch">
+        <img src="touch2.jpg" alt="Touch">
+    </div>
+    <div id="taste" class="image-container">
+        <img src="taste1.jpg" alt="Taste">
+        <img src="taste2.jpg" alt="Taste">
+    </div>
+    <div id="smell" class="image-container">
+        <img src="smell1.jpg" alt="Smell">
+        <img src="smell2.jpg" alt="Smell">
+    </div>
+
+    <script>
+        function showImages(sense) {
+            document.querySelectorAll('.image-container').forEach(div => {
+                div.style.display = 'none';
+            });
+            document.getElementById(sense).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
